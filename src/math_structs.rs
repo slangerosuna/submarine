@@ -174,10 +174,9 @@ impl Quat {
         self.0[3] = w;
     }
     fn rotate(&self, other: Vec3) -> Vec3 {
-        let x = self.0[0] * other.0[3] + self.0[1] * other.0[2] - self.0[2] * other.0[1] + self.0[3] * other.0[0];
-        let y = -self.0[0] * other.0[2] + self.0[1] * other.0[3] + self.0[2] * other.0[0] + self.0[3] * other.0[1];
-        let z = self.0[0] * other.0[1] - self.0[1] * other.0[0] + self.0[2] * other.0[3] + self.0[3] * other.0[2];
-        let w = -self.0[0] * other.0[0] - self.0[1] * other.0[1] - self.0[2] * other.0[2] + self.0[3] * other.0[3];
+        let x = self.0[1] * other.0[2] - self.0[2] * other.0[1] + self.0[3] * other.0[0];
+        let y = -self.0[0] * other.0[2] + self.0[3] * other.0[1];
+        let z = self.0[0] * other.0[1] - self.0[1] * other.0[0] + self.0[3] * other.0[2];
         Vec3([x, y, z])
     }
 }
