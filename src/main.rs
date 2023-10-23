@@ -5,7 +5,7 @@ use std::{
 };
 use rppal::gpio::Gpio;
 
-mod math_structs;
+mod physics;
 
 const MOTOR_LEFT: u8 = 15; //TODO make accurate
 const MOTOR_MIDDLE: u8 = 15; //TODO make accurate
