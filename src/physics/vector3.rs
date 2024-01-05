@@ -54,6 +54,14 @@ impl Vector3 {
         }
     }
 
+    pub fn sub(&self, other: &Self) -> Self {
+        Self {
+            x: self.x - other.x,
+            y: self.y - other.y,
+            z: self.z - other.z,
+        }
+    }
+
     pub fn multiply(&self, scalar: f32) -> Self {
         Self {
             x: self.x * scalar,
